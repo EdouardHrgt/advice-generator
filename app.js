@@ -17,17 +17,14 @@ function quoteGenerator() {
       console.error(err);
     });
 }
-
+quoteGenerator();
 function createEl(text) {
   const container = document.querySelector('.quote__wrapper');
-
   if (container.firstChild) {
     container.removeChild(container.firstElementChild);
   }
-  
   const blockQuote = document.createElement('blockquote');
   const newQuote = document.createTextNode(text);
-
   blockQuote.appendChild(newQuote);
   container.appendChild(blockQuote);
 }
